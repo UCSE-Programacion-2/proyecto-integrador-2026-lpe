@@ -2,8 +2,8 @@
 
 ## 📌 Descripción del negocio
 
-**"Idalia, accesorios con estilo"** es un emprendimiento local de San Salvador de Jujuy, en el que se pueden encontrar stickers, cuadernos, pines, lapiceras y otros accesorios relacionados al anime, comics y demás temáticas que estén siendo tendencia.  Además, incorpora una línea de artículos de estilo vintage destinados a la realización de scrapbooking y journaling, incluyendo papeles, stickers y otros elementos decorativos. De este modo, el emprendimiento combina propuestas actuales con opciones creativas para la personalización y expresión individual.
-El emprendimiento apunta a un público adolescente y fanáticos de las temáticas. 
+**"Idalia, accesorios con estilo"** es un emprendimiento local de San Salvador de Jujuy, en el que se pueden encontrar stickers, cuadernos, pines, lapiceras y otros accesorios relacionados al anime, comics y demás temáticas que estén siendo tendencia. Además, incorpora una línea de artículos de estilo vintage destinados a la realización de scrapbooking y journaling, incluyendo papeles, stickers y otros elementos decorativos. De este modo, el emprendimiento combina propuestas actuales con opciones creativas para la personalización y expresión individual.
+El emprendimiento apunta a un público adolescente y fanáticos de las temáticas.
 La atención al público no se sitúa en un punto fijo, pero cuenta con puesto de atención variados de acuerdo a la realización de eventos de emprendedores.
 
 ---
@@ -44,7 +44,6 @@ De acuerdo a la identidad visual del logo, se definió la siguiente paleta:
 - Verde petróleo suave: `#2A9D8F`
 - Violeta suave: `#7B6D8D`
 
-
 ---
 
 ## 📸 Carpeta fotos: referencia
@@ -53,6 +52,3 @@ De acuerdo a la identidad visual del logo, se definió la siguiente paleta:
 - Foto 2: Vista general del espacio
 - Foto 3: Productos exhibidos
 - Foto 4: Atención a clientes
-
-
-

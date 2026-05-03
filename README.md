@@ -18,6 +18,11 @@ Tablero de GitHub Projects: [Link a tu tablero]
 * No se acepta código sin Issue asociada.
 * Guía para alumnos (commits y protecciones de PR): `docs/como-ejecutar.md` (sección "Guía para alumnos: commits y PRs").
 
+
+## Acceso a tablero
+
+https://github.com/orgs/UCSE-Programacion-2/projects/40/views/1
+
 ## 📹 Sprint Review (todos los sprints)
 * Guía unificada: `docs/sprint-review/README.md`
 * Plantilla para equipos: `docs/sprint-review/sprint-review-template.md`

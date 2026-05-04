@@ -14,14 +14,14 @@ Se identificaron las siguientes problemáticas en el modelo actual de negocio:
 
 - Los pedidos son gestionados a través de aplicaciones de mensajería (WhatsApp) y redes sociales.
 - Se cuenta con personal reducido, lo que genera demoras en la atención y saturación de tareas.
-- El control de stock se realiza mediante planillas de Excel.
+- Cuenta con un Excel para manejar el stock de los productos que ofrecen.
 - No existe un catálogo digital estructurado para explorar productos.
 - El cliente no puede filtrar ni comparar productos fácilmente.
 - No hay un flujo automatizado de compra (carrito, confirmación, seguimiento).
 - La información (productos, pedidos y clientes) está distribuida en múltiples plataformas.
-- Existe riesgo de errores en el control de stock (ventas sin disponibilidad).
-- No se cuenta con métricas claras sobre ventas o productos más demandados.
-- Dificultad para escalar el negocio debido a la dependencia de procesos manuales.
+- Riesgo de error en el control de stock, al realizar un control manual por medio de una planilla de Excel aumenta la probabilidad de errores en las actualizaciones de can􀆟dades y posibles ventas de productos sin stock.
+- No se cuenta con información clara y precisa de productos más vendidos o volúmenes
+- No se cuenta con información clara y precisa de productos más vendidos o volúmenes de ventas lo que dificulta la toma de decisiones estratégicas.
 
 ---
 

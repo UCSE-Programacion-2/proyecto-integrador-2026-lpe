@@ -8,9 +8,10 @@ Tablero de GitHub Projects: [Link a tu tablero]
 * **Apellido, Nombre** - [GitHub Profile](link)
 
 ## 🏢 Cliente Real Elegido
-* **Nombre:** [Nombre del Comercio en Jujuy]
-* **Rubro:** [Ej: Indumentaria Deportiva]
-* **Justificación:** [Explicar brevemente por qué el catálogo es apto para un CRUD]
+* **Nombre:** Idalia, accesrios con estilo
+* **Rubro:** Papeleria y Accesorios
+* **Justificación:** Se optó por la implementación de operaciones CRUD (Create, Read, Update, Delete) debido a la necesidad de gestionar de manera eficiente la información crítica del emprendimiento. El modelo actual del negocio presenta una fuerte dependencia de manejo manual del moviemiento de los productos que ofrece.
+
 
 ## 📝 Reglas de Contribución
 * Uso de Git Flow.

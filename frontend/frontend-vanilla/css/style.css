@@ -23,8 +23,8 @@ ul {
     list-style: none;
 }
 
-/* ==========================================================================
-   HEADER & NAVBAR
+
+ /*  HEADER & NAVBAR
    ========================================================================== */
 .main-header {
     background-color: var(--card-bg);
@@ -72,13 +72,15 @@ ul {
     border-radius: 2px;
 }
 
-/* Navegación por defecto (Mobile: oculto o simplificado para el sprint estático) */
+
 .navbar {
     display: none; /* Se oculta en mobile para seguir mobile-first */
 }
 
-/* ==========================================================================
-   HERO BANNER
+
+   
+
+ /*  HERO BANNER
    ========================================================================== */
 .hero-banner {
     background-color: var(--celeste-pastel);
@@ -154,21 +156,26 @@ ul {
 
 .product-card {
     background-color: var(--card-bg);
-    border-radius: 12px;
+    border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);/* Sombra suave para dar profundidad */
     display: flex;
     flex-direction: column;
 }
 
-.product-image-placeholder {
-    background-color: #EFEFEF;
-    height: 250px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #888;
-    font-size: 0.9rem;
+
+.product-image-container {
+    width: 100%;
+    height: 300px; /* Altura fija para que todas las tarjetas midan lo mismo */
+    overflow: hidden; /* Corta lo que sobresalga si la imagen es muy grande */
+}
+
+.product-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /*Adapta la foto al contenedor sin deformarla */
+    object-position: center;
+    transition: transform 0.3s ease;
 }
 
 .product-info {

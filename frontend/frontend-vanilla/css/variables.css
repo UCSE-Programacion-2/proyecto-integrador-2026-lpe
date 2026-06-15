@@ -1,0 +1,18 @@
+:root {
+    /* Paleta de colores oficial Idalia */
+    --celeste-pastel: #8FB9B5;
+    --coral-rojo: #E76F51;
+    --naranja-calido: #F4A261;
+    --amarillo-pastel: #E9C46A;
+    --verde-petroleo: #2A9D8F;
+    --violeta-suave: #7B6D8D;
+    
+    /* Colores base de fondo y texto Neutros */
+    --bg-cream: #FDF8F2; /* Fondo cálido similar al del logo */
+    --text-dark: #2A2A2A;
+    --text-light: #FFFFFF;
+    --card-bg: #FFFFFF;
+
+    /* Tipografías */
+    --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

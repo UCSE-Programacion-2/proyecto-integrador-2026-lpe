@@ -26,7 +26,7 @@
                     <li><a href="./index.html">Inicio</a></li>
                     <li><a href="#">Catálogo</a></li>
                     <li><a href="#">Carrito</a></li>
-                    <li><a href="./Backoffice.html" class="active">Admin</a></li>
+                    <li><a href="./Backoffice.html" class="active">Administrar</a></li>
                 </ul>
             </nav>
         </div>
@@ -42,7 +42,7 @@
                 <section class="admin-form-section">
                     <div class="admin-card">
                         <h2 class="card-form-title">Agregar Nuevo Producto</h2>
-                        <form class="admin-form" onsubmit="return false;">
+                        <form class="admin-form" >
                             <div class="form-group">
                                 <label for="prod-name">Nombre del Producto</label>
                                 <input type="text" id="prod-name" placeholder="Ej. Cuaderno Gatitos" required>
@@ -64,8 +64,8 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="prod-img">Enlace o nombre de la Imagen</label>
-                                <input type="text" id="prod-img" placeholder="Ej. ./img-index/cuaderno.jpeg">
+                                <label for="prod-img">Agregar Imagen</label>
+                                <input type="file" id="prod-img" >
                             </div>
 
                             <button type="submit" class="btn-primario btn-block">Guardar Producto</button>

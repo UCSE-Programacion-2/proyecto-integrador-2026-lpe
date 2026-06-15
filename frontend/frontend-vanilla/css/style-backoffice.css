@@ -318,12 +318,9 @@ footer {
         width: 100%;
     }
 }
-/* ==========================================================================
-   VISTA BACKOFFICE (ADMINISTRACIÓN)
+/* VISTA BACKOFFICE (ADMINISTRACIÓN)
    ========================================================================== */
-   .admin-main {
-    padding: 2rem 1rem;
-}
+ 
 
 .admin-dashboard-layout {
     display: flex;

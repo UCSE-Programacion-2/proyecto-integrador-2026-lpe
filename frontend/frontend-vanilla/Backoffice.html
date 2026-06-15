@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Idalia - Panel de Administración</title>
+    <link rel="stylesheet" href="./css/variables.css">
+    <link rel="stylesheet" href="./css/style-backoffice.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo-container">
+                <img src="./img-index/logo-idalia.jpeg" alt="Idalia Accesorios" class="logo-img">
+            </a>
+            
+            <button class="menu-toggle" aria-label="Abrir menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="navbar">
+                <ul>
+                    <li><a href="./index.html">Inicio</a></li>
+                    <li><a href="#">Catálogo</a></li>
+                    <li><a href="#">Carrito</a></li>
+                    <li><a href="./Backoffice.html" class="active">Admin</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="admin-main">
+        <div class="section-container">
+            <h1 class="section-titulo">Panel de Control</h1>
+            <p class="section-subtitulo">Gestión del catálogo de productos</p>
+
+            <div class="admin-dashboard-layout">
+                
+                <section class="admin-form-section">
+                    <div class="admin-card">
+                        <h2 class="card-form-title">Agregar Nuevo Producto</h2>
+                        <form class="admin-form" onsubmit="return false;">
+                            <div class="form-group">
+                                <label for="prod-name">Nombre del Producto</label>
+                                <input type="text" id="prod-name" placeholder="Ej. Cuaderno Gatitos" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="prod-category">Categoría</label>
+                                <select id="prod-category" required>
+                                    <option value="">Seleccionar categoría</option>
+                                    <option value="cuaderno">Cuaderno</option>
+                                    <option value="accesorio">Accesorio</option>
+                                    <option value="libreria">Librería</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="prod-price">Precio ($)</label>
+                                <input type="number" id="prod-price" placeholder="Ej. 3500" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="prod-img">Enlace o nombre de la Imagen</label>
+                                <input type="text" id="prod-img" placeholder="Ej. ./img-index/cuaderno.jpeg">
+                            </div>
+
+                            <button type="submit" class="btn-primario btn-block">Guardar Producto</button>
+                        </form>
+                    </div>
+                </section>
+
+                <section class="admin-table-section">
+                    <div class="admin-card table-responsive">
+                        <table class="admin-table">
+                            <thead>
+                                <tr>
+                                    <th>Imagen</th>
+                                    <th>Producto</th>
+                                    <th>Categoría</th>
+                                    <th>Precio</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td data-label="Imagen">
+                                        <img src="./img-index/cuaderno.jpeg" alt="Cuaderno Gatitos" class="admin-thumb">
+                                    </td>
+                                    <td data-label="Producto" class="font-bold">Cuaderno Gatitos</td>
+                                    <td data-label="Categoría"><span class="badge badge-celeste">Cuaderno</span></td>
+                                    <td data-label="Precio" class="font-bold text-verde">$3.500</td>
+                                    <td data-label="Acciones">
+                                        <div class="actions-wrapper">
+                                            <button class="btn-action btn-edit" title="Editar">Editar</button>
+                                            <button class="btn-action btn-delete" title="Eliminar">Eliminar</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td data-label="Imagen">
+                                        <img src="./img-index/collares-gatitos.jpeg" alt="Collares gatitos" class="admin-thumb">
+                                    </td>
+                                    <td data-label="Producto" class="font-bold">Collares gatitos</td>
+                                    <td data-label="Categoría"><span class="badge badge-violeta">Accesorio</span></td>
+                                    <td data-label="Precio" class="font-bold text-verde">$4.000</td>
+                                    <td data-label="Acciones">
+                                        <div class="actions-wrapper">
+                                            <button class="btn-action btn-edit" title="Editar">Editar</button>
+                                            <button class="btn-action btn-delete" title="Eliminar">Eliminar</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td data-label="Imagen">
+                                        <img src="./img-index/sobresA4.jpeg" alt="Sobres A4" class="admin-thumb">
+                                    </td>
+                                    <td data-label="Producto" class="font-bold">Sobres A4</td>
+                                    <td data-label="Categoría"><span class="badge badge-naranja">Librería</span></td>
+                                    <td data-label="Precio" class="font-bold text-verde">$3.000</td>
+                                    <td data-label="Acciones">
+                                        <div class="actions-wrapper">
+                                            <button class="btn-action btn-edit" title="Editar">Editar</button>
+                                            <button class="btn-action btn-delete" title="Eliminar">Eliminar</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-brand">
+                <p class="footer-logo-text">Idalia</p>
+                <p>Accesorios con estilo</p>
+            </div>
+            <div class="footer-links">
+                <h3>Navegación</h3>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="#">Productos</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-derechos">
+                <p>&copy; 2026 Idalia. Todos los derechos reservados para LPE.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

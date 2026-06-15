@@ -1,0 +1,532 @@
+/* ==========================================================================
+   RESET & ESTILOS GENERALES
+   ========================================================================== */
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--bg-cream);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+
+ /*  HEADER & NAVBAR
+   ========================================================================== */
+header {
+    background-color: var(--card-bg);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0; 
+    z-index: 1000;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    
+    max-width: 1200px;
+    margin: 0 auto;
+    
+}
+
+.logo-img {
+    
+    height: 80px; /* Tamaño controlado del logo */
+    width: auto;
+    display: block;
+
+}
+
+/* Menú Hamburguesa para Móviles (Visual) */
+.menu-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 18px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    width: 100%;
+    height: 3px;
+    background-color: var(--verde-petroleo);
+    border-radius: 2px;
+}
+
+
+.navbar {
+    display: none; /* Se oculta en mobile para seguir mobile-first */
+}
+
+
+   
+
+ /*  HERO BANNER
+   ========================================================================== */
+.hero-banner {
+    background-color: var(--celeste-pastel);
+    padding: 4rem 1.5rem;
+    text-align: center;
+    color: var(--text-light);
+}
+
+.hero-content  {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-light);
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.btn-primario {
+    display: inline-block;
+    background-color: var(--coral-rojo);
+    color: var(--text-light);
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: transform 0.2s;
+}
+
+.btn-primario:hover {
+    transform: scale(1.05);
+}
+
+
+/*   SECCIÓN DE PRODUCTOS DESTACADOS
+   ========================================================================== */
+.featured-products {
+    padding: 4rem 1.5rem;
+}
+
+.section-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-titulo {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--violeta-suave);
+    margin-bottom: 0.2rem;
+}
+
+.section-subtitulo {
+    text-align: center;
+    color: var(--naranja-calido);
+    margin-bottom: 3rem;
+    font-weight: 500;
+}
+
+/* Grilla en Mobile (1 columna por defecto) */
+.products-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.product-card {
+    background-color: var(--card-bg);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);/* Sombra suave para dar profundidad */
+    display: flex;
+    flex-direction: column;
+}
+
+
+.product-image-container {
+    width: 100%;
+    height: 300px; /* Altura fija para que todas las tarjetas midan lo mismo */
+    overflow: hidden; /* Corta lo que sobresalga si la imagen es muy grande */
+}
+
+.product-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /*Adapta la foto al contenedor sin deformarla */
+    object-position: center;
+    transition: transform 0.3s ease;
+}
+
+.product-info {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.product-info h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.product-categoria {
+    color: #888;
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+}
+
+.product-precio {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--verde-petroleo);
+    margin-top: auto;
+    margin-bottom: 1.5rem;
+}
+
+.btn-secundario {
+    display: block;
+    text-align: center;
+    background-color: transparent;
+    border: 2px solid var(--amarillo-pastel);
+    color: var(--text-dark);
+    padding: 0.6rem;
+    border-radius: 6px;
+    font-weight: 6px;
+    transition: background-color 0.2s;
+}
+
+.btn-secundario:hover {
+    background-color: var(--amarillo-pastel);
+}
+
+
+/*   FOOTER
+   ========================================================================== */
+footer {
+    background-color: var(--violeta-suave);
+    color: var(--text-light);
+    padding: 3rem 1.5rem 1.5rem 1.5rem;
+    margin-top: 4rem;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.footer-brand .footer-logo-text {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.footer-links h3 {
+    margin-bottom: 1rem;
+    color: var(--amarillo-pastel);
+}
+
+.footer-links ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-links a:hover {
+    color: var(--naranja-calido);
+}
+
+.footer-derechos {
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 1.5rem;
+    text-align: center;
+    font-size: 0.85rem;
+    opacity: 0.8;
+}
+
+
+/*   MEDIA QUERIES
+   ========================================================================== */
+@media (min-width: 768px) {
+    /* Mostrar Menú Navbar Completo */
+    .menu-toggle {
+        display: none;
+    }
+    
+    .navbar {
+        display: block;
+    }
+
+    .navbar ul {
+        display: flex;
+        gap: 2rem;
+    }
+
+    .navbar a {
+        font-weight: 500;
+        padding: 0.5rem 0;
+        transition: color 0.2s;
+    }
+
+    .navbar a:hover, .navbar a.active {
+        color: var(--coral-rojo);
+    }
+
+    /* Ajustar Banner */
+    .hero-banner {
+        padding: 6rem 2rem;
+    }
+
+    .hero-content h1 {
+        font-size: 3.5rem;
+    }
+
+    /* Grilla de productos en Escritorio (3 Columnas) */
+    .products-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* Distribución horizontal del Footer */
+    .footer-container {
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    
+    .footer-bottom {
+        width: 100%;
+    }
+}
+/* ==========================================================================
+   VISTA BACKOFFICE (ADMINISTRACIÓN)
+   ========================================================================== */
+   .admin-main {
+    padding: 2rem 1rem;
+}
+
+.admin-dashboard-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Tarjetas de contenedor base */
+.admin-card {
+    background-color: var(--card-bg);
+    border-radius: 20px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    border: 1px solid rgba(143, 185, 181, 0.2); /* Sutil borde celeste pastel */
+}
+
+/* Formularios de alta */
+.card-form-title {
+    font-size: 1.3rem;
+    color: var(--violeta-suave);
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid var(--bg-cream);
+    padding-bottom: 0.5rem;
+}
+
+.admin-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.form-group label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.form-group input, 
+.form-group select {
+    padding: 0.75rem;
+    border: 1.5px solid #E0E0E0;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 0.95rem;
+    background-color: #FFF;
+    color: var(--text-dark);
+    transition: border-color 0.2s;
+}
+
+.form-group input:focus, 
+.form-group select:focus {
+    outline: none;
+    border-color: var(--celeste-pastel);
+}
+
+.btn-block {
+    width: 100%;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+}
+
+/* Estilos de la tabla adaptativa (Mobile First) */
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* En resoluciones pequeñas (móviles), convertimos las filas de la tabla en bloques */
+@media (max-width: 767px) {
+    .admin-table thead {
+        display: none; /* Ocultamos los encabezados tradicionales en móviles */
+    }
+
+    .admin-table tr {
+        display: block;
+        border: 1px solid #EAEAEA;
+        border-radius: 12px;
+        margin-bottom: 1rem;
+        padding: 0.5rem;
+        background-color: #FFF;
+    }
+
+    .admin-table td {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.6rem 0.8rem;
+        border-bottom: 1px dashed #F0F0F0;
+        text-align: right;
+    }
+
+    .admin-table td:last-child {
+        border-bottom: none;
+    }
+
+    /* Insertamos el título de la columna dinámicamente usando data-label */
+    .admin-table td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        color: var(--text-dark);
+        text-align: left;
+        margin-right: 1rem;
+    }
+}
+
+/* Diseño de tabla clásico para Tablets y Desktop */
+@media (min-width: 768px) {
+    .admin-dashboard-layout {
+        display: grid;
+        grid-template-columns: 1fr 2fr; /* Formulario a la izquierda, tabla a la derecha */
+        align-items: start;
+    }
+
+    .admin-table th, 
+    .admin-table td {
+        padding: 1rem;
+        text-align: left;
+        border-bottom: 1px solid #ECEEEF;
+    }
+
+    .admin-table th {
+        background-color: var(--bg-cream);
+        color: var(--violeta-suave);
+        font-weight: 600;
+    }
+
+    .admin-table tr:hover {
+        background-color: rgba(253, 248, 242, 0.5); /* Sutil realce al pasar el cursor */
+    }
+}
+
+/* Elementos internos de la tabla */
+.admin-thumb {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #DDD;
+}
+
+.font-bold { font-weight: bold; }
+.text-verde { color: var(--verde-petroleo); }
+
+/* Badges decorativos para las categorías */
+.badge {
+    display: inline-block;
+    padding: 0.25rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #FFF;
+}
+.badge-celeste { background-color: var(--celeste-pastel); }
+.badge-violeta { background-color: var(--violeta-suave); }
+.badge-naranja { background-color: var(--naranja-calido); }
+
+/* Botones de acción (Editar / Eliminar) */
+.actions-wrapper {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: flex-end;
+}
+
+@media (min-width: 768px) {
+    .actions-wrapper {
+        justify-content: flex-start;
+    }
+}
+
+.btn-action {
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.btn-edit {
+    background-color: transparent;
+    border: 1.5px solid var(--verde-petroleo);
+    color: var(--verde-petroleo);
+}
+
+.btn-edit:hover {
+    background-color: var(--verde-petroleo);
+    color: #FFF;
+}
+
+.btn-delete {
+    background-color: transparent;
+    border: 1.5px solid var(--coral-rojo);
+    color: var(--coral-rojo);
+}
+
+.btn-delete:hover {
+    background-color: var(--coral-rojo);
+    color: #FFF;
+}

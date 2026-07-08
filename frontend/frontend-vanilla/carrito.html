@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Idalia - Mi Carrito</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/variables.css">
+    <link rel="stylesheet" href="./css/carrito.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo-container">
+                <img src="./img-index/logo-idalia.jpeg" alt="Idalia Accesorios" class="logo-img">
+            </a>
+            
+            <button class="menu-toggle" aria-label="Abrir menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="#">Catálogo</a></li>
+                    <li><a href="carrito.html">Carrito</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="cart-section">
+            <div class="cart-container">
+                <h1 class="cart-title">Tu Carrito</h1>
+                
+                <div class="cart-content">
+                    
+                    <div class="cart-items-list">
+                        
+                        
+                        <article class="cart-item">
+                            <div class="cart-item-image">
+                                <img src="./img-index/cuaderno.jpeg" alt="Cuaderno Gatitos">
+                            </div>
+                            <div class="cart-item-info">
+                                <h3>Cuaderno Gatitos</h3>
+                                <p class="product-categoria">Papelería</p>
+                                <span class="cart-item-price">$3.500</span>
+                            </div>
+                            <div class="cart-item-actions">
+                                <div class="cantidad-selector">
+                                    <button class="cant-btn" type="button">-</button>
+                                    
+                                    <button class="cant-btn" type="button">+</button>
+                                </div>
+                                <button class="btn-delete" type="button" aria-label="Eliminar producto">🗑️</button>
+                            </div>
+                        </article>
+
+                        
+                        <article class="cart-item">
+                            <div class="cart-item-image">
+                                <img src="./img-index/collares-gatitos.jpeg" alt="Collares Gatitos">
+                            </div>
+                            <div class="cart-item-info">
+                                <h3>Collares Gatitos</h3>
+                                <p class="product-categoria">Accesorio</p>
+                                <span class="cart-item-price">$4.000</span>
+                            </div>
+                            <div class="cart-item-actions">
+                                <div class="cantidad-selector">
+                                    <button class="cant-btn" type="button">-</button>
+                                    
+                                    <button class="cant-btn" type="button">+</button>
+                                </div>
+                                <button class="btn-delete" type="button" aria-label="Eliminar producto">🗑️</button>
+                            </div>
+                        </article>
+
+                    </div>
+
+                    <aside class="cart-summary">
+                        <h2>Resumen del Pedido</h2>
+                        
+                        <div class="summary-details">
+                            <div class="summary-row">
+                                <span>Subtotal (3 productos)</span>
+                                <span>$11.500</span>
+                            </div>
+                            <div class="summary-row">
+                                <span>Envío</span>
+                                <span class="shipping-free">Gratis</span>
+                            </div>
+                            <div class="summary-row total-row">
+                                <span>Total</span>
+                                <span class="total-price">$11.500</span>
+                            </div>
+                        </div>
+
+                    
+                        <div class="summary-buttons">
+                            <a href="#" class="btn-primario btn-checkout">Iniciar Compra</a>
+                            <a href="index.html" class="btn-continue-shopping">Seguir comprando</a>
+                        </div>
+                    </aside>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-brand">
+                <p class="footer-logo-text">Idalia</p>
+                <p>Accesorios con estilo</p>
+            </div>
+            <div class="footer-links">
+                <h3>Navegación</h3>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="#">Productos</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-derechos">
+                <p>&copy; 2026 Idalia. Todos los derechos reservados para LPE.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

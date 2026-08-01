@@ -318,3 +318,190 @@ footer {
         width: 100%;
     }
 }
+/* VISTA BACKOFFICE (ADMINISTRACIÓN)
+   ========================================================================== */
+ 
+
+.admin-dashboard-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Tarjetas de contenedor base */
+.admin-card {
+    background-color: var(--card-bg);
+    border-radius: 20px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    border: 1px solid rgba(143, 185, 181, 0.2); /* Sutil borde celeste pastel */
+}
+
+/* Formularios de alta */
+.card-form-title {
+    font-size: 1.3rem;
+    color: var(--violeta-suave);
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid var(--bg-cream);
+    padding-bottom: 0.5rem;
+}
+
+.admin-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.form-group label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.form-group input, 
+.form-group select {
+    padding: 0.75rem;
+    border: 1.5px solid #E0E0E0;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 0.95rem;
+    background-color: #FFF;
+    color: var(--text-dark);
+    transition: border-color 0.2s;
+}
+
+.form-group input:focus, 
+.form-group select:focus {
+    outline: none;
+    border-color: var(--celeste-pastel);
+}
+
+.btn-block {
+    width: 100%;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+}
+
+/* Estilos de la tabla adaptativa (Mobile First) */
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Elementos internos de la tabla */
+.admin-thumb {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #DDD;
+}
+
+.font-bold { font-weight: bold; }
+.text-verde { color: var(--verde-petroleo); }
+
+
+
+
+
+.btn-accion {
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.btn-edit {
+    background-color: transparent;
+    border: 1.5px solid var(--verde-petroleo);
+    color: var(--verde-petroleo);
+}
+
+.btn-edit:hover {
+    background-color: var(--verde-petroleo);
+    color: #FFF;
+}
+
+.btn-delete {
+    background-color: transparent;
+    border: 1.5px solid var(--coral-rojo);
+    color: var(--coral-rojo);
+}
+
+.btn-delete:hover {
+    background-color: var(--coral-rojo);
+    color: #FFF;
+}
+
+/* En resoluciones pequeñas (móviles), convertimos las filas de la tabla en bloques */
+@media (max-width: 767px) {
+    .admin-table thead {
+        display: none; /* Ocultamos los encabezados tradicionales en móviles */
+    }
+
+    .admin-table tr {
+        display: block;
+        border: 1px solid #EAEAEA;
+        border-radius: 12px;
+        margin-bottom: 1rem;
+        padding: 0.5rem;
+        background-color: #FFF;
+    }
+
+    .admin-table td {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.6rem 0.8rem;
+        border-bottom: 1px dashed #F0F0F0;
+        text-align: right;
+    }
+
+    .admin-table td:last-child {
+        border-bottom: none;
+    }
+
+    /* Insertamos el título de la columna dinámicamente usando data-label */
+    .admin-table td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        color: var(--text-dark);
+        text-align: left;
+        margin-right: 1rem;
+    }
+}
+
+/* Diseño de tabla clásico para Tablets y Desktop */
+@media (min-width: 768px) {
+    .admin-dashboard-layout {
+        display: grid;
+        grid-template-columns: 1fr 2fr; /* Formulario a la izquierda, tabla a la derecha */
+        align-items: start;
+    }
+
+    .admin-table th, 
+    .admin-table td {
+        padding: 1rem;
+        text-align: left;
+        border-bottom: 1px solid #ECEEEF;
+    }
+
+    .admin-table th {
+        background-color: var(--bg-cream);
+        color: var(--violeta-suave);
+        font-weight: 600;
+    }
+
+    .admin-table tr:hover {
+        background-color: rgba(253, 248, 242, 0.5); /* Sutil realce al pasar el cursor */
+    }
+}

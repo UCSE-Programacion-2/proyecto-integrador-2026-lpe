@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Idalia - Panel de Administración</title>
     <link rel="stylesheet" href="./css/variables.css">
-    <link rel="stylesheet" href="./css/style-backoffice.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/catalogo.css">
 </head>
 <body>
 
@@ -34,44 +35,11 @@
 
     <main >
         <div class="section-container">
-            <h1 class="section-titulo">Panel de Control</h1>
+            <h1 class="section-titulo">Nuestro Catálogo</h1>
             
 
-            <div class="admin-dashboard-layout">
-                
-                <section class="admin-form-section">
-                    <div class="admin-card">
-                        <h2 class="card-form-title">Agregar Nuevo Producto</h2>
-                        <form class="admin-form" >
-                            <div class="form-group">
-                                <label for="prod-name">Nombre del Producto</label>
-                                <input type="text" id="prod-name" placeholder="Ej. Cuaderno Gatitos" required>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="prod-categoria">Categoría</label>
-                                <select id="prod-categoria" required>
-                                    <option value="">Seleccionar categoría</option>
-                                    <option value="cuaderno">Cuaderno</option>
-                                    <option value="accesorio">Accesorio</option>
-                                    <option value="libreria">Librería</option>
-                                </select>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="prod-precio">Precio ($)</label>
-                                <input type="number" id="prod-precio" placeholder="Ej. 3500" required>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="prod-img">Agregar Imagen</label>
-                                <input type="file" id="prod-img" >
-                            </div>
-
-                            <button type="submit" class="btn-primario btn-block">Guardar Producto</button>
-                        </form>
-                    </div>
-                </section>
+            <div class="admin-dashboard-layout">           
+              
 
                 <section class="admin-table-section">
                     <div class="admin-card table-responsive">
@@ -80,7 +48,7 @@
                                 <tr>
                                     <th>Imagen</th>
                                     <th>Producto</th>
-                                    <th>Categoría</th>
+                                   
                                     <th>Precio</th>
                                     <th>Acciones</th>
                                 </tr>
@@ -91,12 +59,12 @@
                                         <img src="./img-index/cuaderno.jpeg" alt="Cuaderno Gatitos" class="admin-thumb">
                                     </td>
                                     <td data-label="Producto" class="font-bold">Cuaderno Gatitos</td>
-                                    <td data-label="Categoría"><span class="badge badge-celeste">Cuaderno</span></td>
+                                    
                                     <td data-label="Precio" class="font-bold text-verde">$3.500</td>
                                     <td data-label="Acciones">
                                         <div >
-                                            <button class="btn-accion btn-edit" title="Editar">Editar</button>
-                                            <button class="btn-accion btn-delete" title="Eliminar">Eliminar</button>
+                                            <button class="btn-accion btn-detalle" title="Editar">Detalle</button>
+                                            
                                         </div>
                                     </td>
                                 </tr>
@@ -105,12 +73,12 @@
                                         <img src="./img-index/collares-gatitos.jpeg" alt="Collares gatitos" class="admin-thumb">
                                     </td>
                                     <td data-label="Producto" class="font-bold">Collares gatitos</td>
-                                    <td data-label="Categoría"><span>Accesorio</span></td>
+                                   
                                     <td data-label="Precio" class="font-bold text-verde">$4.000</td>
                                     <td data-label="Acciones">
                                         <div >
-                                            <button class="btn-accion btn-edit" title="Editar">Editar</button>
-                                            <button class="btn-accion btn-delete" title="Eliminar">Eliminar</button>
+                                            <button class="btn-accion btn-detalle" title="Detalle">Detalle</button>
+                                            
                                         </div>
                                     </td>
                                 </tr>
@@ -119,12 +87,12 @@
                                         <img src="./img-index/sobresA4.jpeg" alt="Sobres A4" class="admin-thumb">
                                     </td>
                                     <td data-label="Producto" class="font-bold">Sobres A4</td>
-                                    <td data-label="Categoría"><span >Librería</span></td>
+                                   
                                     <td data-label="Precio" class="font-bold text-verde">$3.000</td>
                                     <td data-label="Acciones">
                                         <div >
-                                            <button class="btn-accion btn-edit" title="Editar">Editar</button>
-                                            <button class="btn-accion btn-delete" title="Eliminar">Eliminar</button>
+                                            <button class="btn-accion btn-detalle" title="Detalle">Detalle</button>
+                                          
                                         </div>
                                     </td>
                                 </tr>

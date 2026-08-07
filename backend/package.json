@@ -19,8 +19,10 @@
     "prettier": "^3.2.5"
   },
   "dependencies": {
+    "bcryptjs": "^3.0.3",
     "dotenv": "^17.4.2",
     "express": "^4.22.2",
+    "jsonwebtoken": "^9.0.3",
     "mogoose": "^0.0.1-security",
     "mongodb": "^7.5.0",
     "mongoose": "^8.0.3"

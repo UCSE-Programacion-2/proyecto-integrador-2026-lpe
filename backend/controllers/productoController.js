@@ -11,7 +11,7 @@ const obtenerProductos = async (req, res) => {
 };
 
 
-//agregar una nueva clase
+//agregar un nuevo producto
 const crearProducto = async (req, res) => {
     try {
         // Extraemos los datos que vienen en el cuerpo de la petición (Postman)

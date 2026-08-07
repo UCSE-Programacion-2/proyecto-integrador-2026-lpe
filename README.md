@@ -37,3 +37,25 @@ https://github.com/orgs/UCSE-Programacion-2/projects/40
 - Plantilla para equipos: `docs/sprint-review/sprint-review-template.md`
 - Rúbrica de evaluación: `docs/sprint-review/sprint-review-rubrica.md`
 - Checklist
+
+# Documentación de la API REST
+
+Esta es la documentación de los endpoints de la API REST para el manejo de usuarios, administrador, CRUD de productos. Todos los endpoints están construidos con Express.js y se conectan a una base de datos MongoDB a través de Mongoose.
+
+---
+## SE DEBEN INSTALAR LAS SIGUIENTES LIBRERIAS
+- npm install bcrypt
+- npm install jsonwebtoken
+- npm install dotenv
+- npm install express
+- npm install mongoose  
+- npm install mongodb
+
+  ### Archivo Environtment
+  - Nuevo Archivo .env dentro de "backend" con el siguiente contenido
+  - **Ejemplo de Environtment-Backend y React:**
+    ``` json    
+      MONGODB_URI= mongodb://127.0.0.1:27017/<nombre_de_BASE_DE_DATOS>
+      PORT=3000
+         JWT_SECRET=<tulclavejwtsecreta>    
+    ``` json

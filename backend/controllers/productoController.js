@@ -17,7 +17,7 @@ const crearProducto = async (req, res) => {
         // Extraemos los datos que vienen en el cuerpo de la petición (Postman)
         const { id, nombre, categoria, descripcion, precio_costo,precio_venta, cantidad, imagen    } = req.body;
 
-        if (!id || !nombre || !categoria || !descripcion || !precio_costo || precio_venta || !cantidad) {
+        if (!id || !nombre || !categoria || !descripcion || !precio_costo || !precio_venta || !cantidad) {
             return res.status(400).json({ message: 'faltan campos o se ingresaron de manera incorrecta' });
         }
         // Creamos una nueva instancia del modelo con esos datos

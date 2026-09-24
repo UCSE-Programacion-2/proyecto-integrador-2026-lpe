@@ -17,7 +17,7 @@ app.use(cors());
 
 conectarDB();
 
-app.use('/productos', productoRoutes);
+app.use('/api/productos', productoRoutes);
 app.use('/api/auth', authRoutes);
 
 const PORT = process.env.PORT || 3000;

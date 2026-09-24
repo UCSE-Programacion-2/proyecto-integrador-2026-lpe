@@ -5,15 +5,15 @@ const dotenv = require('dotenv');
 const productoRoutes = require('./routes/productoRoutes');
 const conectarDB = require('./config/database');
 const authRoutes = require('./routes/authRoutes');
+const cors = require('cors');
 
 
 
 dotenv.config();
 
 const app = express();
-
-app.use(cors());
 app.use(express.json());
+app.use(cors());
 
 conectarDB();
 

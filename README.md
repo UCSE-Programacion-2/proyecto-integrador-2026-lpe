@@ -50,6 +50,7 @@ Esta es la documentación de los endpoints de la API REST para el manejo de usua
 - npm install express
 - npm install mongoose  
 - npm install mongodb
+- npm install cors
 
   ### Archivo Environtment
   - Nuevo Archivo .env dentro de "backend" con el siguiente contenido

@@ -4,25 +4,37 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Iniciar Sesión - Idalia</title>
+  
+  
   <link rel="stylesheet" href="./css/variables.css">
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="./css/auth.css">
 </head>
 <body>
   <header>
-    <nav class="navbar">
-      <div class="logo">
-        <a href="index.html">
-          <img src="img-index/logo-idalia.jpeg" alt="Logo Idalia">
-        </a>
-      </div>
-      <ul class="nav-links">
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="carrito.html">Carrito</a></li>
-        <li><a href="login.html" class="active">Iniciar Sesión</a></li>
-        <li><a href="registro.html">Registrarse</a></li>
-      </ul>
-    </nav>
+    <div class="header-container">
+      <a href="index.html">
+        <img src="img-index/logo-idalia.jpeg" alt="Logo Idalia" class="logo-img">
+      </a>
+
+      <!-- Botón hamburguesa para mobile -->
+      <button class="menu-toggle" aria-label="Abrir menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <!-- Menú de navegación -->
+      <nav class="navbar">
+        <ul class="nav-links">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="carrito.html">Carrito</a></li>
+          <li><a href="login.html" class="active">Iniciar Sesión</a></li>
+          <li><a href="registro.html">Registrarse</a></li>
+          <li><a href="#">Catalogo</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <main class="main-container auth-wrapper">
@@ -71,7 +83,9 @@
   </main>
 
   <footer>
-    <p>&copy; 2026 Proyecto Integrador. Todos los derechos reservados.</p>
+    <div class="footer-container">
+      <p>&copy; 2026 Proyecto Integrador. Todos los derechos reservados.</p>
+    </div>
   </footer>
 
   <script type="module" src="js/auth.js"></script>

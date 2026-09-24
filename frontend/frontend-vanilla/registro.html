@@ -4,26 +4,37 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Crear Cuenta - Idalia</title>
+
+
   <link rel="stylesheet" href="./css/variables.css">
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="./css/auth.css">
 </head>
 <body>
-  <header>
-    <nav class="navbar">
-      <div class="logo">
-        <a href="index.html">
-          <img src="img-index/logo-idalia.jpeg" alt="Logo Idalia">
-        </a>
-      </div>
-      <ul class="nav-links">
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="carrito.html">Carrito</a></li>
-        <li><a href="login.html">Iniciar Sesión</a></li>
-        <li><a href="registro.html" class="active">Registrarse</a></li>
-      </ul>
-    </nav>
-  </header>
+    <header>
+        <div class="header-container">
+          <a href="index.html">
+            <img src="img-index/logo-idalia.jpeg" alt="Logo Idalia" class="logo-img">
+          </a>
+    
+          <!-- Botón hamburguesa para mobile -->
+          <button class="menu-toggle" aria-label="Abrir menú">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+    
+          <!-- Menú de navegación -->
+          <nav class="navbar">
+            <ul class="nav-links">
+              <li><a href="index.html">Inicio</a></li>
+              <li><a href="carrito.html">Carrito</a></li>
+              <li><a href="login.html" class="active">Iniciar Sesión</a></li>
+              <li><a href="registro.html">Registrarse</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
 
   <main class="main-container auth-wrapper">
     <section class="auth-section">
@@ -70,7 +81,9 @@
             >
           </div>
 
+          <!-- Mensajes de feedback -->
           <div id="register-error-message" class="error-alert" style="display: none;" role="alert"></div>
+          <div id="register-success-message" class="success-alert" style="display: none;" role="status"></div>
 
           <button type="submit" class="btn-submit">Crear Cuenta</button>
         </form>

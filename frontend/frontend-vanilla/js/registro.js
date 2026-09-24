@@ -6,8 +6,8 @@ const nombreInput = document.getElementById('nombre');
   const passwordInput = document.getElementById('password');
   const errorMessage = document.getElementById('register-error-message');
   const registerForm = document.getElementById('register-form');
-
-async function handleRegister(event) {
+  const selectRol = document.getElementById('rol');
+async function registrarNewUser(event) {
   event.preventDefault();
 
   
@@ -15,7 +15,8 @@ async function handleRegister(event) {
   const nombre = nombreInput.value.trim();
   const email = emailInput.value.trim();
   const password = passwordInput.value.trim();
-
+  
+ 
   // Limpiar mensaje de error previo
   if (errorMessage) {
     errorMessage.style.display = 'none';
@@ -34,10 +35,13 @@ async function handleRegister(event) {
   }
 
   try {
+    const rol = selectRol.value; 
+    console.log(rol);
+
     // 1. Petición POST a la API para registrar el usuario
     const data = await apiFetch('/auth/registro', {
       method: 'POST',
-      body: JSON.stringify({ nombre, email, password }),
+      body: JSON.stringify({ nombre, email, password, rol }),
     });
 
    
@@ -49,6 +53,8 @@ async function handleRegister(event) {
   } catch (error) {
     showError(error.message || 'Error al intentar registrar la cuenta.');
   }
+
+  
 }
 
 function showError(message) {
@@ -60,7 +66,7 @@ function showError(message) {
     alert(message);
   }
 }
-registerForm.addEventListener('submit', handleRegister);
+registerForm.addEventListener('submit', registrarNewUser);
 
 document.addEventListener('DOMContentLoaded', () => {
   

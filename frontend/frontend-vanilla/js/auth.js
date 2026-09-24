@@ -1,5 +1,5 @@
 
-//import { apiFetch } from './api.js';
+import { apiFetch } from './api.js';
 
 //const HISTORIAL_KEY ='usuarioYtoken';
 //const HISTORIAL_KEY_USER = 'usuario';
@@ -12,7 +12,7 @@ const emailInput = document.getElementById('email');
   
 
 
-async function handleLogin(event) {
+async function Login(event) {
   event.preventDefault();
 
   const email = emailInput.value.trim();
@@ -30,16 +30,7 @@ async function handleLogin(event) {
     });
     
      guardarUsuarioYToken(data.token, data.nombre)
-    // 2. Guardar Token y datos de usuario en localStorage
-    /*if (data.token) {
-      localStorage.setItem('token', data.token);
-      if (data.nombre) {
-        localStorage.setItem('user', JSON.stringify(data.nombre));
-      }
-
-      // 3. Redireccionar a la página principal
-      window.location.href = 'index.html';
-    }*/
+    
       window.location.href = 'index.html';
   } catch (error) {
     // Manejo de errores
@@ -52,35 +43,6 @@ async function handleLogin(event) {
   }
 }
 
-async function apiFetch(endpoint, options = {}) {
-  const token = obtenerToken();
-
-  const headers = {
-    'Content-Type': 'application/json',
-    ...(token && { 'Authorization': `Bearer ${token}` }),
-    ...options.headers,
-  };
-
-  try {
-    const response = await fetch(`${API_URL}${endpoint}`, {
-      ...options,
-      headers,
-    });
-
-    const data = await response.json();
-
-    if (!response.ok) {
-      // Extrae el mensaje enviado desde el backend (message, msg, o error)
-      const serverMessage = data.mensaje || data.msg || data.error || 'Credenciales incorrectas o error en la solicitud';
-      throw new Error(serverMessage);
-    }
-
-    return data;
-  } catch (error) {
-    console.error(`[API Error] ${endpoint}:`, error.message);
-    throw error;
-  }
-}
 
 function obtenerToken() {
     const cotizacionGuardado = localStorage.getItem('token');
@@ -100,7 +62,7 @@ function obtenerToken() {
 
 
 
-loginForm.addEventListener('submit', handleLogin);
+loginForm.addEventListener('submit', Login);
 
 document.addEventListener('DOMContentLoaded', () => {
   

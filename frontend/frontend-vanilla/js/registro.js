@@ -40,13 +40,7 @@ async function handleRegister(event) {
       body: JSON.stringify({ nombre, email, password }),
     });
 
-    // 2. Si el backend responde con un token (o creación exitosa)
-    if (data.token) {
-      localStorage.setItem('token', data.token);
-      if (data.usuario) {
-        localStorage.setItem('user', JSON.stringify(data.usuario));
-      }
-    }
+   
 
     // 3. Notificar al usuario y redirigir
     alert(data.message || data.msg || '¡Usuario creado con éxito!');

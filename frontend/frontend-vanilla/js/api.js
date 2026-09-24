@@ -21,7 +21,7 @@ export async function apiFetch(endpoint, options = {}) {
 
     if (!response.ok) {
       // Extrae el mensaje enviado desde el backend (message, msg, o error)
-      const serverMessage = data.message || data.msg || data.error || 'Credenciales incorrectas o error en la solicitud';
+      const serverMessage = data.mensaje || data.msg || data.error || 'Credenciales incorrectas o error en la solicitud';
       throw new Error(serverMessage);
     }
 

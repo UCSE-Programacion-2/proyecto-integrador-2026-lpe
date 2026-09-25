@@ -23,7 +23,7 @@ async function registrarNewUser(event) {
     errorMessage.textContent = '';
   }
 
-  // Validación básica del frontend
+  // Validación
   if (!nombre || !email || !password) {
     showError('Por favor, completa todos los campos.');
     return;
@@ -46,7 +46,7 @@ async function registrarNewUser(event) {
 
    
 
-    // 3. Notificar al usuario y redirigir
+    
     alert(data.message || data.msg || '¡Usuario creado con éxito!');
     window.location.href = 'login.html';
 

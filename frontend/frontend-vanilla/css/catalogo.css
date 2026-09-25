@@ -196,3 +196,124 @@
         background-color: rgba(253, 248, 242, 0.5); /* Sutil realce al pasar el cursor */
     }
 }
+
+
+/* Estilos para el Modal de Detalle */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+  
+  .modal.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+  
+  .modal-content {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 1.5rem;
+    width: 90%;
+    max-width: 550px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    position: relative;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+  
+  .modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 0.75rem;
+    margin-bottom: 1rem;
+  }
+  
+  .modal-header h3 {
+    margin: 0;
+    color: var(--text-dark, #2a2a2a);
+  }
+  
+  .modal-header .cerrar-modal {
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #666;
+  }
+  
+  /* Estilos internos del Detalle del Producto */
+  .detail-body {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: left;
+  }
+  
+  .detail-body img {
+    width: 100%;
+    max-height: 280px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .detail-body h2 {
+    margin: 0.5rem 0 0 0;
+    font-size: 1.4rem;
+    color: #1a1a1a;
+  }
+  
+  .detail-meta {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  
+  .badge {
+    background-color: var(--verde-petroleo, #2a9d8f);
+    color: #ffffff;
+    padding: 0.3rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+  }
+  
+  .badge-precio {
+    background-color: var(--coral-rojo, #e76f51);
+  }
+  
+  .detail-body p {
+    color: #555555;
+    line-height: 1.5;
+    font-size: 0.95rem;
+  }
+  
+  .modal-footer {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .btn-cerrar {
+    background-color: #6c757d;
+    color: #fff;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+

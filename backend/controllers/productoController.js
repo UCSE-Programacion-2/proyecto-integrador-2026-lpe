@@ -15,9 +15,9 @@ const obtenerProductos = async (req, res) => {
 const crearProducto = async (req, res) => {
     try {
         // Extraemos los datos que vienen en el cuerpo de la petición (Postman)
-        const {nombre, categoria, descripcion, precio_costo,precio_venta, cantidad, imagen    } = req.body;
+        const {nombre, categoria, descripcion, precio, cantidad    } = req.body;
 
-        if (!nombre || !categoria || !descripcion || !precio_costo || precio_venta || !cantidad) {
+        if (!nombre || !categoria || !descripcion || !precio || !cantidad) {
             return res.status(400).json({ message: 'faltan campos o se ingresaron de manera incorrecta' });
         }
         // Creamos una nueva instancia del modelo con esos datos
@@ -25,10 +25,8 @@ const crearProducto = async (req, res) => {
             nombre,
             categoria,
             descripcion,
-            precio_costo,
-            precio_venta,
-            cantidad,
-            imagen
+            precio,
+            cantidad
         });
         // Guardamos el producto en la base de datos de MongoDB
         await nuevoProducto.save();

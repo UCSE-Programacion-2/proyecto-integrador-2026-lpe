@@ -50,7 +50,11 @@
                                 <label for="prod-name">Nombre del Producto</label>
                                 <input type="text" id="prod-name" placeholder="Ej. Cuaderno Gatitos" required>
                             </div>
-
+                            <div class="form-group">
+                                <label for="prod-decripcion">Descripción</label>
+                                <input type="text" id="prod-descripcion" required>
+                            </div>
+                            
                             <div class="form-group">
                                 <label for="prod-categoria">Categoría</label>
                                 <select id="prod-categoria" required>
@@ -58,9 +62,13 @@
                                     <option value="cuaderno">Cuaderno</option>
                                     <option value="accesorio">Accesorio</option>
                                     <option value="libreria">Librería</option>
+                                    <option value="Papeleria Vintage"> Papeleria vintage</option>
                                 </select>
                             </div>
-
+                            <div class="form-group">
+                                <label for="prod-cantidad">Cantidad</label>
+                                <input type="number" id="prod-cantidad" required>
+                            </div>
                             <div class="form-group">
                                 <label for="prod-precio">Precio ($)</label>
                                 <input type="number" id="prod-precio" placeholder="Ej. 3500" required>
@@ -68,7 +76,7 @@
 
                             <div class="form-group">
                                 <label for="prod-img">Ruta o URL de Imagen</label>
-                                <input type="text" id="prod-img" placeholder="./img-index/cuaderno.jpeg" required>
+                                <input type="text" id="prod-img" placeholder="./img-index/cuaderno.jpeg">
                             </div>
 
                             <div id="admin-message" style="display: none; padding: 0.5rem; border-radius: 4px; margin-bottom: 1rem;"></div>

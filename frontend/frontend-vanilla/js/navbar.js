@@ -35,8 +35,14 @@ const userString = localStorage.getItem('user');
       logoutLi.classList.add('auth-nav-item');
       logoutLi.innerHTML = `<a href="#" id="logout-btn" style="color: var(--coral-rojo, #E76F51); font-weight: 600;">Cerrar Sesión</a>`;
       
+      //Boton para administrar productos
+      const registerLi = document.createElement('li');
+      registerLi.classList.add('auth-nav-item');
+      registerLi.innerHTML = `<a href="Backoficce.html">Administrar</a>`;
+
       navList.appendChild(userLi);
       navList.appendChild(logoutLi);
+      navList.appendChild(registerLi);
       const CerrarButton = document.getElementById('logout-btn'); 
       // Evento para cerrar sesión
       CerrarButton.addEventListener('click', (e) => {

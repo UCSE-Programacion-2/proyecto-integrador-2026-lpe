@@ -77,13 +77,19 @@ async function guardarProducto(e) {
   const nameInput = document.getElementById('prod-name');
   const categoriaSelect = document.getElementById('prod-categoria');
   const precioInput = document.getElementById('prod-precio');
+  const desInput = document.getElementById('prod-descripcion');
+  const cantInput = document.getElementById('prod-cantidad');
   const imgInput = document.getElementById('prod-img');
 
   const id = idInput.value;
   const productoData = {
     nombre: nameInput.value.trim(),
     categoria: categoriaSelect.value,
+    descripcion: desInput.value.trim(),   
     precio: Number(precioInput.value),
+    cantidad: Number(cantInput.value)
+
+
     //imagen: imgInput.value.trim()
   };
 

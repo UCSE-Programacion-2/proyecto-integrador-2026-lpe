@@ -2,11 +2,7 @@ const mongoose = require('mongoose');
 
 // 1. Creamos el esquema (la estructura de los datos)
 const productoSchema = new mongoose.Schema({
-    id: {
-        type: Number,
-        required: true,
-        unique: true // Esto cumple con que sea un "Número único"
-    },
+   
     nombre: {
         type: String,
         required: true
@@ -19,11 +15,12 @@ const productoSchema = new mongoose.Schema({
         type: String,
         required: false
     },
-    precio_venta: {
+    //precio_venta podria usarse para distingir entre el precio de costo y el precio de venta al publico
+    precio_venta: { 
         type: Number,
-        required: true
+        required: false
     },
-    precio_costo: {
+    precio: {
         type: Number,
         required: true  
     },

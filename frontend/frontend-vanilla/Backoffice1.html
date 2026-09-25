@@ -32,20 +32,17 @@
         </div>
     </header>
 
-    <main>
+    <main >
         <div class="section-container">
             <h1 class="section-titulo">Panel de Control</h1>
+            
 
             <div class="admin-dashboard-layout">
                 
                 <section class="admin-form-section">
                     <div class="admin-card">
-                        <h2 id="form-title" class="card-form-title">Agregar Nuevo Producto</h2>
-                        
-                        <!-- Formulario con ID e campo de ID oculto para edición -->
-                        <form id="product-form" class="admin-form">
-                            <input type="hidden" id="prod-id">
-
+                        <h2 class="card-form-title">Agregar Nuevo Producto</h2>
+                        <form class="admin-form" >
                             <div class="form-group">
                                 <label for="prod-name">Nombre del Producto</label>
                                 <input type="text" id="prod-name" placeholder="Ej. Cuaderno Gatitos" required>
@@ -67,14 +64,11 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="prod-img">Ruta o URL de Imagen</label>
-                                <input type="text" id="prod-img" placeholder="./img-index/cuaderno.jpeg" required>
+                                <label for="prod-img">Agregar Imagen</label>
+                                <input type="file" id="prod-img" >
                             </div>
 
-                            <div id="admin-message" style="display: none; padding: 0.5rem; border-radius: 4px; margin-bottom: 1rem;"></div>
-
-                            <button type="submit" id="btn-guardar" class="btn-primario btn-block">Guardar Producto</button>
-                            <button type="button" id="btn-cancelar" class="btn-secundario btn-block" style="display: none; margin-top: 0.5rem;">Cancelar Edición</button>
+                            <button type="submit" class="btn-primario btn-block">Guardar Producto</button>
                         </form>
                     </div>
                 </section>
@@ -91,10 +85,48 @@
                                     <th>Acciones</th>
                                 </tr>
                             </thead>
-                            <!-- tbody dinámico que se llenará con JS -->
-                            <tbody id="admin-products-table">
+                            <tbody>
                                 <tr>
-                                    <td colspan="5" style="text-align: center;">Cargando productos...</td>
+                                    <td data-label="Imagen">
+                                        <img src="./img-index/cuaderno.jpeg" alt="Cuaderno Gatitos" class="admin-thumb">
+                                    </td>
+                                    <td data-label="Producto" class="font-bold">Cuaderno Gatitos</td>
+                                    <td data-label="Categoría"><span class="badge badge-celeste">Cuaderno</span></td>
+                                    <td data-label="Precio" class="font-bold text-verde">$3.500</td>
+                                    <td data-label="Acciones">
+                                        <div >
+                                            <button class="btn-accion btn-edit" title="Editar">Editar</button>
+                                            <button class="btn-accion btn-delete" title="Eliminar">Eliminar</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td data-label="Imagen">
+                                        <img src="./img-index/collares-gatitos.jpeg" alt="Collares gatitos" class="admin-thumb">
+                                    </td>
+                                    <td data-label="Producto" class="font-bold">Collares gatitos</td>
+                                    <td data-label="Categoría"><span>Accesorio</span></td>
+                                    <td data-label="Precio" class="font-bold text-verde">$4.000</td>
+                                    <td data-label="Acciones">
+                                        <div >
+                                            <button class="btn-accion btn-edit" title="Editar">Editar</button>
+                                            <button class="btn-accion btn-delete" title="Eliminar">Eliminar</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td data-label="Imagen">
+                                        <img src="./img-index/sobresA4.jpeg" alt="Sobres A4" class="admin-thumb">
+                                    </td>
+                                    <td data-label="Producto" class="font-bold">Sobres A4</td>
+                                    <td data-label="Categoría"><span >Librería</span></td>
+                                    <td data-label="Precio" class="font-bold text-verde">$3.000</td>
+                                    <td data-label="Acciones">
+                                        <div >
+                                            <button class="btn-accion btn-edit" title="Editar">Editar</button>
+                                            <button class="btn-accion btn-delete" title="Eliminar">Eliminar</button>
+                                        </div>
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -115,7 +147,8 @@
                 <h3>Navegación</h3>
                 <ul>
                     <li><a href="index.html">Inicio</a></li>
-                    <li><a href="catalogo.html">Productos</a></li>
+                    <li><a href="#">Productos</a></li>
+                    <li><a href="#">Contacto</a></li>
                 </ul>
             </div>
             <div class="footer-derechos">
@@ -124,8 +157,5 @@
         </div>
     </footer>
 
-    <!-- Scripts modularizados -->
-    <script type="module" src="./js/navbar.js"></script>
-    <script type="module" src="./js/admin.js"></script>
 </body>
 </html>

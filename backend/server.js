@@ -1,5 +1,5 @@
 const express = require('express');
-const cors = require('cors');
+const cors = require('cors'); // para permitir solicitudes desde el frontend npm install cors
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 const productoRoutes = require('./routes/productoRoutes');

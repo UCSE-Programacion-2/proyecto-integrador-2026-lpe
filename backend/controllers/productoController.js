@@ -15,14 +15,13 @@ const obtenerProductos = async (req, res) => {
 const crearProducto = async (req, res) => {
     try {
         // Extraemos los datos que vienen en el cuerpo de la petición (Postman)
-        const { id, nombre, categoria, descripcion, precio_costo,precio_venta, cantidad, imagen    } = req.body;
+        const {nombre, categoria, descripcion, precio_costo,precio_venta, cantidad, imagen    } = req.body;
 
-        if (!id || !nombre || !categoria || !descripcion || !precio_costo || precio_venta || !cantidad) {
+        if (!nombre || !categoria || !descripcion || !precio_costo || precio_venta || !cantidad) {
             return res.status(400).json({ message: 'faltan campos o se ingresaron de manera incorrecta' });
         }
         // Creamos una nueva instancia del modelo con esos datos
         const nuevoProducto = new Producto({
-            id,
             nombre,
             categoria,
             descripcion,
@@ -88,8 +87,8 @@ const actualizarProducto = async (req, res) => {
 
         // Buscamos por código y actualizamos. 
         // { new: true } hace que MongoDB devuelva el producto ya modificado en lugar del viejo.
-        const claseActualizado = await Producto.findOneAndUpdate(
-            { id: Number(id) }, 
+        const claseActualizado = await Producto.findByIdAndUpdate( 
+            id, 
             datosAActualizar, 
             { returnDocument:'after', runValidators: true } 
         );
@@ -121,7 +120,7 @@ const eliminarProducto = async (req, res) => {
         const { id } = req.params; // Capturamos el código de la URL
 
         // Buscamos el producto por su código único y lo borramos de la base de datos
-        const productoEliminado = await Producto.findOneAndDelete({ id: Number(id) });
+        const productoEliminado = await Producto.findByIdAndDelete(id);
 
         // Si el producto no existe en la base de datos
         if (!productoEliminado) {

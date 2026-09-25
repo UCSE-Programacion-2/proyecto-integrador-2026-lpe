@@ -37,6 +37,7 @@ async function cargarProductos() {
           <h3>${nombre}</h3>
           <p class="product-categoria">${categoria}</p>
           <span class="product-precio">${precio}</span>
+          <button type="button" class="btn-primario">Agregar Carrito</button>
           <button type="button" class="btn-secundario btn-detalle">Ver Detalle</button>
         </div>
       `;

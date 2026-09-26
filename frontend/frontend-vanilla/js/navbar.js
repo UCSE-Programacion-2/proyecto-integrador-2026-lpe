@@ -38,7 +38,7 @@ const userString = localStorage.getItem('user');
       //Boton para administrar productos
       const registerLi = document.createElement('li');
       registerLi.classList.add('auth-nav-item');
-      registerLi.innerHTML = `<a href="Backoficce.html">Administrar</a>`;
+      registerLi.innerHTML = `<a href="Backoffice.html">Administrar</a>`;
 
       navList.appendChild(userLi);
       navList.appendChild(logoutLi);

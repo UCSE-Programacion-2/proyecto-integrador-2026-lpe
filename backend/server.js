@@ -11,8 +11,12 @@ const authRoutes = require('./routes/authRoutes');
 dotenv.config();
 
 const app = express();
-app.use(express.json());
+//app.use(express.json());
 app.use(cors());
+
+// Aumentar el límite de tamaño para permitir imágenes pesadas en Base64
+app.use(express.json({ limit: '50mb' }));
+app.use(express.urlencoded({ limit: '50mb', extended: true }));
 
 conectarDB();
 

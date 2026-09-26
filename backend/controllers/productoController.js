@@ -15,7 +15,7 @@ const obtenerProductos = async (req, res) => {
 const crearProducto = async (req, res) => {
     try {
         // Extraemos los datos que vienen en el cuerpo de la petición (Postman)
-        const {nombre, categoria, descripcion, precio, cantidad    } = req.body;
+        const {nombre, categoria, descripcion, precio, cantidad, imagen   } = req.body;
 
         if (!nombre || !categoria || !descripcion || !precio || !cantidad) {
             return res.status(400).json({ message: 'faltan campos o se ingresaron de manera incorrecta' });
@@ -26,7 +26,8 @@ const crearProducto = async (req, res) => {
             categoria,
             descripcion,
             precio,
-            cantidad
+            cantidad,
+            imagen,
         });
         // Guardamos el producto en la base de datos de MongoDB
         await nuevoProducto.save();
@@ -38,8 +39,10 @@ const crearProducto = async (req, res) => {
         });
     } catch (error) {
                if (error.code === 11000) {
-             return res.status(400).json({
-                mensaje: 'Error: El código del Producto ya existe en la base de datos'
+                const campoDuplicado = Object.keys(error.keyValue || {})[0] || 'campo registrado';
+            const valorDuplicado = error.keyValue ? error.keyValue[campoDuplicado] : '';
+            return res.status(400).json({
+                mensaje: `Ya existe un producto con el ${campoDuplicado}: "${valorDuplicado}"`
             });
         }
     }

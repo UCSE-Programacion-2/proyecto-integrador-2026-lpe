@@ -1,7 +1,7 @@
 const Usuario = require('../models/Usuario');
 const jwt = require('jsonwebtoken'); 
 
-// Función auxiliar para generar el Token JWT
+// Función auxiliar para generar el Token JWT y expirar al as 8hs de iniciada sesion 
 const generarToken = (id, rol) => {
   return jwt.sign({ id, rol }, process.env.JWT_SECRET, { expiresIn: '8h' });
 };

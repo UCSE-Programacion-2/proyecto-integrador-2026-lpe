@@ -2,11 +2,12 @@
 
 const token = localStorage.getItem('token');
 const userString = localStorage.getItem('user');
+
   
     // Seleccionamos la lista <ul> dentro del nav.navbar
     const navList = document.querySelector('nav.navbar ul');
 
-
+//console.log(userString.nombre);
   export function actualizarNavbar() {
     
     if (!navList) return;
@@ -14,13 +15,16 @@ const userString = localStorage.getItem('user');
     // Limpiamos dinámicamente opciones de auth previas para evitar duplicados
     const authElements = navList.querySelectorAll('.auth-nav-item');
     authElements.forEach((el) => el.remove());
-  
+    
     if (token && userString) {
       // USUARIO LOGUEADO
-      let nombreUsuario = 'Usuario';
+      let nombreUsuario = "";
+      let rolUsuario = 'user';
       try {
+
         const user = JSON.parse(userString);
-        nombreUsuario = user || 'Usuario';
+        nombreUsuario = user.nombre || 'Usuario';
+        rolUsuario = user.rol;
       } catch (e) {
         console.error('Error al obtener el usuario:', e);
       }
@@ -36,13 +40,24 @@ const userString = localStorage.getItem('user');
       logoutLi.innerHTML = `<a href="#" id="logout-btn" style="color: var(--coral-rojo, #E76F51); font-weight: 600;">Cerrar Sesión</a>`;
       
       //Boton para administrar productos
-      const registerLi = document.createElement('li');
+      /*const registerLi = document.createElement('li');
       registerLi.classList.add('auth-nav-item');
-      registerLi.innerHTML = `<a href="Backoffice.html">Administrar</a>`;
+      registerLi.innerHTML = `<a href="Backoffice.html">Administrar</a>`;*/
+       
+      // Botón de administrar (SÓLO para rol admin)
+    if (rolUsuario === 'admin') {
+      const adminLi = document.createElement('li');
+      adminLi.classList.add('auth-nav-item');
+      adminLi.innerHTML = `<a href="Backoffice.html">Administrar</a>`;
+      navList.appendChild(adminLi);
+    }
+
+
+
 
       navList.appendChild(userLi);
       navList.appendChild(logoutLi);
-      navList.appendChild(registerLi);
+      //navList.appendChild(registerLi);
       const CerrarButton = document.getElementById('logout-btn'); 
       // Evento para cerrar sesión
       CerrarButton.addEventListener('click', (e) => {

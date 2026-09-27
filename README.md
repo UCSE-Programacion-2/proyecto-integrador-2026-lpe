@@ -43,7 +43,7 @@ https://github.com/orgs/UCSE-Programacion-2/projects/40
 Esta es la documentación de los endpoints de la API REST para el manejo de usuarios, administrador, CRUD de productos. Todos los endpoints están construidos con Express.js y se conectan a una base de datos MongoDB a través de Mongoose.
 
 ---
-## SE DEBEN INSTALAR LAS SIGUIENTES LIBRERIAS
+## SE DEBEN INSTALAR LAS SIGUIENTES LIBRERIAS en carpeta backend (proyecto-integrador-2026-lpe/backend)
 - npm install bcrypt
 - npm install jsonwebtoken
 - npm install dotenv
@@ -51,6 +51,9 @@ Esta es la documentación de los endpoints de la API REST para el manejo de usua
 - npm install mongoose  
 - npm install mongodb
 - npm install cors
+
+  luego ejecutar el comando 
+  - npm run dev 
 
   ### Archivo Environtment
   - Nuevo Archivo .env dentro de "backend" con el siguiente contenido

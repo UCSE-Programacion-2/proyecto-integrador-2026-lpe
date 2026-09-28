@@ -4,8 +4,7 @@ Tablero de GitHub Projects: [https://github.com/orgs/UCSE-Programacion-2/project
 
 ## 👥 Integrantes (LPE)
 
-- Torres, Renzo Hernán - [https://github.com/rtrenzotorres]
-- Grosso, Gino - [https://github.com/GinoGrosso]
+
 - Castillo, Marcos - [https://github.com/milmanes20]
 - Gani, Giuliano - [https://github.com/giulianogm]
 

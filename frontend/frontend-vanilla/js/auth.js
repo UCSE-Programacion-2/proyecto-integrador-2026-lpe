@@ -29,7 +29,7 @@ async function Login(event) {
       body: JSON.stringify({ email, password }),
     });
     
-     guardarUsuarioYToken(data.token, data.nombre)
+     guardarUsuarioYToken(data.token, data)
     
       window.location.href = 'index.html';
   } catch (error) {
@@ -49,11 +49,11 @@ function obtenerToken() {
     return cotizacionGuardado ? JSON.parse(cotizacionGuardado) : [];
   }
 
-  function guardarUsuarioYToken(token,nombre) {
+  function guardarUsuarioYToken(token,usuario) {
     if (token) {
         localStorage.setItem('token', token);
-        if (nombre) {
-          localStorage.setItem('user', JSON.stringify(nombre));
+        if (usuario) {
+          localStorage.setItem('user', JSON.stringify(usuario));
         }
   
     }

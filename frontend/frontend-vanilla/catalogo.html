@@ -1,129 +1,87 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Idalia - Panel de Administración</title>
-    <link rel="stylesheet" href="./css/variables.css">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/catalogo.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo de Productos - Idalia</title>
+  <link rel="stylesheet" href="./css/variables.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/catalogo.css">
 </head>
 <body>
+  <header>
+    <div class="header-container">
+      <a href="index.html" class="logo-container">
+        <img src="./img-index/logo-idalia.jpeg" alt="Idalia Accesorios" class="logo-img">
+      </a>
+      
+      <button class="menu-toggle" aria-label="Abrir menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
-    <header>
-        <div class="header-container">
-            <a href="index.html" class="logo-container">
-                <img src="./img-index/logo-idalia.jpeg" alt="Idalia Accesorios" class="logo-img">
-            </a>
-            
-            <button class="menu-toggle" aria-label="Abrir menú">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+      <nav class="navbar">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="catalogo.html" class="active">Catálogo</a></li>
+          <li><a href="carrito.html">Carrito</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-            <nav class="navbar">
-                <ul>
-                    <li><a href="./index.html">Inicio</a></li>
-                    <li><a href="catalogo.html">Catálogo</a></li>
-                    <li><a href="carrito.html">Carrito</a></li>
-                    <li><a href="./Backoffice.html" class="active">Administrar</a></li>
-                </ul>
-            </nav>
+  <main>
+    <section class="featured-products">
+      <div class="section-container">
+        <h2 class="section-titulo">Nuestros Productos</h2>
+        <p class="section-subtitulo">Explora toda nuestra colección</p>
+        
+        <!-- Contenedor donde JS inyectará las tarjetas de productos -->
+        <div id="products-grid" class="products-grid">
+          <p>Cargando productos...</p>
         </div>
-    </header>
+      </div>
+    </section>
+    <!-- Modal Detalle de Producto -->
+<div id="modalDetalle" class="modal hidden">
+    <div class="modal-content modal-large">
+      <div class="modal-header">
+        <h3>Detalle del Producto</h3>
+        <button type="button" class="cerrar-modal">&times;</button>
+      </div>
+  
+      <!-- Contenido inyectado dinámicamente por JavaScript -->
+      <div id="detalleContent" class="detail-body"></div>
+  
+      <div class="modal-footer">
+        <button type="button" class="btn-cerrar cerrar-modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+  </main>
 
-    <main >
-        <div class="section-container">
-            <h1 class="section-titulo">Nuestro Catálogo</h1>
-            
+  <footer>
+    <div class="footer-container">
+      <div class="footer-brand">
+        <p class="footer-logo-text">Idalia</p>
+        <p>Accesorios con estilo</p>
+      </div>
+      <div class="footer-links">
+        <h3>Navegación</h3>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="catalogo.html">Productos</a></li>
+        </ul>
+      </div>
+      <div class="footer-derechos">
+        <p>&copy; 2026 Idalia. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
 
-            <div class="admin-dashboard-layout">           
-              
-
-                <section class="admin-table-section">
-                    <div class="admin-card table-responsive">
-                        <table class="admin-table">
-                            <thead>
-                                <tr>
-                                    <th>Imagen</th>
-                                    <th>Producto</th>
-                                   
-                                    <th>Precio</th>
-                                    <th>Acciones</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td data-label="Imagen">
-                                        <img src="./img-index/cuaderno.jpeg" alt="Cuaderno Gatitos" class="admin-thumb">
-                                    </td>
-                                    <td data-label="Producto" class="font-bold">Cuaderno Gatitos</td>
-                                    
-                                    <td data-label="Precio" class="font-bold text-verde">$3.500</td>
-                                    <td data-label="Acciones">
-                                        <div >
-                                            <button class="btn-accion btn-detalle" title="Editar">Detalle</button>
-                                            
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td data-label="Imagen">
-                                        <img src="./img-index/collares-gatitos.jpeg" alt="Collares gatitos" class="admin-thumb">
-                                    </td>
-                                    <td data-label="Producto" class="font-bold">Collares gatitos</td>
-                                   
-                                    <td data-label="Precio" class="font-bold text-verde">$4.000</td>
-                                    <td data-label="Acciones">
-                                        <div >
-                                            <button class="btn-accion btn-detalle" title="Detalle">Detalle</button>
-                                            
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td data-label="Imagen">
-                                        <img src="./img-index/sobresA4.jpeg" alt="Sobres A4" class="admin-thumb">
-                                    </td>
-                                    <td data-label="Producto" class="font-bold">Sobres A4</td>
-                                   
-                                    <td data-label="Precio" class="font-bold text-verde">$3.000</td>
-                                    <td data-label="Acciones">
-                                        <div >
-                                            <button class="btn-accion btn-detalle" title="Detalle">Detalle</button>
-                                          
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </section>
-
-            </div>
-        </div>
-    </main>
-
-    <footer>
-        <div class="footer-container">
-            <div class="footer-brand">
-                <p class="footer-logo-text">Idalia</p>
-                <p>Accesorios con estilo</p>
-            </div>
-            <div class="footer-links">
-                <h3>Navegación</h3>
-                <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="#">Productos</a></li>
-                    <li><a href="#">Contacto</a></li>
-                </ul>
-            </div>
-            <div class="footer-derechos">
-                <p>&copy; 2026 Idalia. Todos los derechos reservados para LPE.</p>
-            </div>
-        </div>
-    </footer>
-
+  <!-- Scripts JS como módulos -->
+  <script type="module" src="./js/navbar.js"></script>
+  <script type="module" src="./js/productos.js"></script>
 </body>
 </html>
